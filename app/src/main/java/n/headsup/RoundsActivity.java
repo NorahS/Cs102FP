@@ -19,6 +19,7 @@ public class RoundsActivity extends AppCompatActivity {
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
      */
     private static final boolean AUTO_HIDE = true;
+    RoundsFragment fragment1;
 
     /**
      * If {@link #AUTO_HIDE} is set, the number of milliseconds to wait after
@@ -91,7 +92,7 @@ public class RoundsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rounds);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container2, new RoundsFragment())
+                    .add(R.id.container2, (fragment1 = new RoundsFragment()))
                     .commit();
         }
         mVisible = true;
@@ -164,5 +165,13 @@ public class RoundsActivity extends AppCompatActivity {
     private void delayedHide(int delayMillis) {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        fragment1. stopSensors();
+        HelperFunctions.reset();
+
     }
 }

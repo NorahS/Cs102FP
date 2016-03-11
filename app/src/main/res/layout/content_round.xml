@@ -4,26 +4,26 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <TextView
-        android:layout_width="166dp"
-        android:layout_height="64dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text=""
-        android:id="@+id/catogry"
-        android:layout_gravity="center_horizontal"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text=""-->
+        <!--android:id="@+id/catogry"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:textColor="#9c43ad"-->
+        <!--android:textSize="30dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_centerHorizontal="true" />-->
 
-    <TextView
-        android:layout_width="166dp"
-        android:layout_height="64dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text=""
-        android:id="@+id/rot"
-        android:layout_gravity="center_horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/catogry"
-        android:layout_alignStart="@+id/catogry"
-        android:layout_marginBottom="79dp" />
+    <!--<TextView-->
+        <!--android:layout_width="166dp"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text=""-->
+        <!--android:id="@+id/rot"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true" />-->
 
 </RelativeLayout>

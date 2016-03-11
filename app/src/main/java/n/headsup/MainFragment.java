@@ -28,8 +28,12 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.content_main, container, false);
 
+        int width = getResources().getDisplayMetrics().widthPixels;
+        int hei=getResources().getDisplayMetrics().heightPixels/3;
+
 
         arabicBtn = (Button) rootView.findViewById(R.id.arabicBtn);
+        arabicBtn.setHeight(hei);
         arabicBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,7 +42,10 @@ public class MainFragment extends Fragment {
             }
         });
 
+
         englishBtn = (Button) rootView.findViewById(R.id.englishBtn);
+        englishBtn.setHeight(hei);
+
         englishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +55,7 @@ public class MainFragment extends Fragment {
         });
 
         bothBtn = (Button) rootView.findViewById(R.id.bothBtn);
+        bothBtn.setHeight(hei);
         bothBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

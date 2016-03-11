@@ -22,7 +22,7 @@
             android:name=".StarterActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_starter"
-            android:screenOrientation="landscape"
+            android:screenOrientation="sensor"
             android:theme="@style/FullscreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +36,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EnglishActivity"
-            android:label="@string/title_activity_english"
+            android:label="Logo"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".BothActivity"

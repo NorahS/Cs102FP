@@ -1,22 +1,14 @@
 package n.headsup;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.Button;
+import android.widget.GridView;
 
-public class EnglishActivity extends AppCompatActivity {
-
+public class EnglishActivity extends Languages{
 
 
-    Button randomBtn;
-    Button moviesBtn;
-    Button showsBtn;
-    Button songsBtn;
-    Button celebsBtn;
-    Button actBtn;
+
+    static final String catogries[]={"Actit", "Shows", "Celebrities", "Movies", "Songs"};
 
 
     @Override
@@ -26,78 +18,19 @@ public class EnglishActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final Intent sendIntent = new Intent(getApplicationContext(), RoundsActivity.class);
-        sendIntent.setAction(Intent.ACTION_SEND);
-
-        randomBtn = (Button) findViewById(R.id.randomBtn);
-        randomBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendIntent.putExtra(Intent.EXTRA_TEXT, randomBtn.getText());
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
-            }
-        });
+        String list[] = {"Actit", "Random", "Shows", "Celebrities", "Movies", "Songs"};
+        int[] ids= {R.drawable.eact, R.drawable.erandom, R.drawable.eshows, R.drawable.ecelebs, R.drawable.emovies, R.drawable.esongs};
+        this.setBtns(new ButtonAdapter(this, list, ids));
+        this.setGridview((GridView) findViewById(R.id.menu2));
+        this.setChosen("English/");
+        this.setAdapter();
+        this.setListner();
 
 
 
-        moviesBtn = (Button) findViewById(R.id.moviesBtn);
-        moviesBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendIntent.putExtra(Intent.EXTRA_TEXT, moviesBtn.getText());
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
-            }
-        });
 
 
-
-        showsBtn = (Button) findViewById(R.id.showsBtn);
-        showsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendIntent.putExtra(Intent.EXTRA_TEXT, showsBtn.getText());
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
-            }
-        });
-
-
-
-        songsBtn = (Button) findViewById(R.id.songsBtn);
-        songsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendIntent.putExtra(Intent.EXTRA_TEXT, songsBtn.getText());
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
-            }
-        });
-
-
-
-        celebsBtn = (Button) findViewById(R.id.celebsBtn);
-        celebsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendIntent.putExtra(Intent.EXTRA_TEXT, celebsBtn.getText());
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
-            }
-        });
-
-
-
-        actBtn = (Button) findViewById(R.id.actBtn);
-        actBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendIntent.putExtra(Intent.EXTRA_TEXT, actBtn.getText());
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
-            }
-        });
     }
+
 
 }
