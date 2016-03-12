@@ -9,7 +9,7 @@ public class ArabicActivity extends Languages {
 
 
 
-    static final String catgories[] ={"5", "4", "6", "2", "3","7","1"};
+    static final String categories[] ={"5", "4", "6", "2", "3","7","1"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
