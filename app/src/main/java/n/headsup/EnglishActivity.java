@@ -8,7 +8,7 @@ public class EnglishActivity extends Languages{
 
 
 
-    static final String catogries[]={"Actit", "Shows", "Celebrities", "Movies", "Songs"};
+    static final String categories[]={"Actit", "Shows", "Celebrities", "Movies", "Songs"};
 
 
     @Override
