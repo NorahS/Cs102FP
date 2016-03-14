@@ -26,13 +26,13 @@ public class HelperFunctions {
         Setup.setText(holder.get(ranIndex));
     }
 
-    protected static void play(Setup obg,String category, AssetManager mngr) {
+    protected static void play(Setup obj,String category, AssetManager mngr) {
 
         BufferedReader cat = null;
 
         if ((category.split("/")[1]).equals("Random")) {
             try {
-                Random(obg,category,mngr);
+                Random(obj,category,mngr);
             } catch (IOException e) {
             }
 
@@ -58,11 +58,11 @@ public class HelperFunctions {
        usedInd = new int[holder.size()];
     }
 
-    protected static void Random(Setup obg,String path , AssetManager mngr) throws IOException {
+    protected static void Random(Setup obj,String path , AssetManager mngr) throws IOException {
 
         //  String list[] = EnglishActivity.catogries;
         path= path.split("/")[0];
-        String[] list = (String[])obg.langugae.get(path);
+        String[] list = (String[])obj.langugae.get(path);
         //i till we add actit out for english
         String folder = path.split("/")[0];
         BufferedReader cat=null;
