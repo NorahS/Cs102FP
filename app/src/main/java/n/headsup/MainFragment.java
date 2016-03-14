@@ -18,9 +18,9 @@ public class MainFragment extends Fragment {
     //constructor
     public MainFragment(){}
 
-    Button arabicBtn;
-    Button englishBtn;
-    Button bothBtn;
+    private Button arabicBtn;
+    private Button englishBtn;
+    private Button bothBtn;
 
 
     @Override
