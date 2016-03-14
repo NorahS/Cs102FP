@@ -17,10 +17,10 @@ public class ButtonAdapter extends BaseAdapter {
     private int btns[];
     private String mThumbIds[];
 
-    public ButtonAdapter(Context c, String[] catogries, int btns[]) {
+    public ButtonAdapter(Context c, String[] categories, int btns[]) {
         this.mContext = c;
         this.btns = btns;
-        this.mThumbIds = catogries;
+        this.mThumbIds = categories;
 
     }
     public int getCount() {
