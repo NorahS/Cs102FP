@@ -21,7 +21,7 @@ public class Sensors extends Setup implements SensorEventListener {
 
 
     private float mGravity[], mGeomagnetic[];
-    private int rollDegs[] = new int[12];
+    private int rotDegs[] = new int[12];
     private long lastUpdate = 0;
     private int degIndex = 0;
     private int lowThreshold = 25;
@@ -87,11 +87,11 @@ public class Sensors extends Setup implements SensorEventListener {
             senSensorManager.getOrientation(rotation, orientation);
 
 
-            float roll = orientation[2];
-            int rollDeg = (int) Math.round(Math.toDegrees(roll));
-            rollDegs[degIndex] = rollDeg;
+            float rot = orientation[2];
+            int rotDeg = (int) Math.round(Math.toDegrees(rot));
+            rotDegs[degIndex] = rotDeg;
             degIndex++;
-            if (degIndex == rollDegs.length) {
+            if (degIndex == rotDegs.length) {
 
                 int devRot = this.state();
                 long curTime = System.currentTimeMillis();
@@ -120,10 +120,10 @@ public class Sensors extends Setup implements SensorEventListener {
 
     private int state() {
         int sum = 0;
-        for (int i = 0; i != rollDegs.length; i++)
-            sum += rollDegs[i];
+        for (int i = 0; i != rotDegs.length; i++)
+            sum += rotDegs[i];
         degIndex = 0;
-        int aver = sum / rollDegs.length;
+        int aver = sum / rotDegs.length;
         int n = getActivity().getWindowManager().getDefaultDisplay().getRotation();
         if (n == Surface.ROTATION_90)
             aver *= -1;
