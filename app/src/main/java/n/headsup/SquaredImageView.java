@@ -13,12 +13,12 @@ final class SquaredImageView extends ImageView {
         super(context);
     }
 
-    public SquaredImageView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public SquaredImageView(Context context, AttributeSet attributes) {
+        super(context, attributes);
     }
 
-    @Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    @Override protected void onMeasure(int width, int height) {
+        super.onMeasure(width, height);
         setMeasuredDimension(getMeasuredWidth(), getMeasuredWidth());
     }
 }
